@@ -214,7 +214,7 @@ if (backend === 'Mongo') {
     Person.estimatedDocumentCount().then((count) => {
       console.log('count: ', count)
       //response.json(count)
-      response.send(`<p> Phonebook has info for ${count} people </p> 
+      response.json(`<p> Phonebook has info for ${count} people </p> 
                    <p> ${ds} </p>`)
     })
   })
