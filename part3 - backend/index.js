@@ -213,7 +213,7 @@ if (backend === 'Mongo') {
   app.get('/info', (request, response) => {
     Person.estimatedDocumentCount().then((count) => {
       console.log('count: ', count)
-      response.json(count)
+      count
       //response.send(`<p> Phonebook has info for ${count} people </p> 
       //             <p> ${ds} </p>`)
     })
