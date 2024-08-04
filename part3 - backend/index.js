@@ -173,6 +173,7 @@ if (backend === 'JSON') {
     person.save().then(savedPerson => {
       response.json(savedPerson)
     })
+    .catch(error => next(error))
   })
  }
 
