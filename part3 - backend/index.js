@@ -158,22 +158,23 @@ if (backend === 'JSON') {
    app.post('/api/persons', (request, response) => {
     const body = request.body
 
-    if (body.name === undefined) {
+  /*  if (body.name === undefined) {
       return response.status(400).json({ error: 'name missing' })
     }
 
     if (body.number === undefined) {
       return response.status(400).json({ error: 'number missing' })
     }
-    const person = new Person({
+  */  const person = new Person({
       name: body.name,
       number: body.number,
     })
 
-    person.save().then(savedPerson => {
-      response.json(savedPerson)
-    })
-    .catch(error => next(error))
+    person.save()
+      .then(savedPerson => {
+        response.json(savedPerson)
+      })
+      .catch(error => next(error))
   })
  }
 
