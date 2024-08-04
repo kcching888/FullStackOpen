@@ -155,7 +155,7 @@ if (backend === 'JSON') {
 
  // post a new contact entry into phonebook - Mongo DB
  if (backend === 'Mongo') {
-   app.post('/api/persons', (request, response) => {
+   app.post('/api/persons', (request, response, next) => {
     const body = request.body
 
   /*  if (body.name === undefined) {
